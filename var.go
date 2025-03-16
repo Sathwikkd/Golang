@@ -58,7 +58,6 @@ func multiVar2() {
 }
 
 //zero values
-
 func zeroVal() {
 	var i int
 	var j float32
