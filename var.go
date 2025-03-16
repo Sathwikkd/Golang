@@ -4,6 +4,7 @@ import (
 	"fmt"
 )
 
+// function calls
 func main() {
 	basicVariable()
 	declarationInit()
@@ -57,7 +58,7 @@ func multiVar2() {
 	fmt.Println(x, y, z)
 }
 
-//zero values
+// zero values
 func zeroVal() {
 	var i int
 	var j float32
