@@ -1,21 +1,17 @@
 package main
 
-import (
-	"fmt"
+import "fmt"
 
-	"golang.org/x/exp/constraints"
-)
-
-func genericSum[T constraints.Ordered](numbers []T) T {
-	var result T
-	for i := range numbers {
-		result += numbers[i]
+func PrintSlice[T any](s []T) {
+	for _,i := range s {
+		fmt.Println(i)
 	}
-	return result
 }
+
 func main() {
-	numbers := []int{1, 2, 3, 4, 5}
-	sum:=genericSum(numbers)
-	fmt.Println(sum)
-	
+	intSlice := []int{1, 2, 3}
+	stringSlice := []string{"hello", "world"}
+
+	PrintSlice[int](intSlice)
+	PrintSlice[string](stringSlice)
 }
